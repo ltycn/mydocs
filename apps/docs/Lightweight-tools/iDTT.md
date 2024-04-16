@@ -2,6 +2,18 @@
 sidebar_position: 1
 ---
 
-# iDTT
+# iDTT 快速查看当前DTT配置
 
-something about to happen
+## 最新版本
+[下载链接](https://lenovobeijing-my.sharepoint.com/:u:/g/personal/liuty24_lenovo_com/EXQ37J9QwqdHk4UvfR66AiIBiZnccmp_mU1hXPaxiT-7rg?e=s1Gryz)
+
+## 使用要求
+DTT版本 9.0.11000+
+
+## 使用方法
+1. 双击运行
+2. 背景颜色说明：
+   - **白色**：数据正常更新。
+   - **红色**：表明已超过2秒未接收到数据更新，可能已断线。
+   - **黄色**：当前窗口焦点在此应用上，若测试其他场景，需移开焦点。
+   
