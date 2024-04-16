@@ -1,6 +1,6 @@
 ---
-slug: websocket-refference
-title: Websocket Protocol Refference
+slug: websocket-protocol
+title: Websocket Protocol
 authors:
   name: 天义
 tags: [websocket]
