@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sidebar_label: iDTT
+sidebar_class_name: lightweight tools
 ---
 
 # iDTT
