@@ -23,6 +23,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'lightweight tools',
+      collapsed: false,
       items: ['iDTT'],
     },
   ],
