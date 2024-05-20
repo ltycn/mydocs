@@ -20,10 +20,21 @@ AutoCharge在运行时可以检测Windows PC的电量，并控制PDU的开合状
 ## 前置条件
 
 1. 此程序根据[特普瑞斯官网](http://sztprs.com/case/615.html)提供的SDK进行开发。使用的PDU应支持SNMP控制功能。
+2. 为PDU接入局域网网线
 2. 按照PDU贴纸上提供的信息，进入PDU管理页面，修改PDU的IP地址为“192.168.1.111”
-![](./AutoCharge/pdu-info.png)
 
 ## 使用方法
+
+1. Direct Control模式
+AutoCharge.exe [Socket Port] [Control]
+Socket Port: 插口顺序（1~8）
+Control：控制开关（1：开 0：关）
+![](./AutoCharge/use-examples.png)
+
+2. Benchmark模式
+AutoCharge.exe [Socket Port]
+Socket Port: 插口顺序（1~8）
+![](./AutoCharge/use-examples2.png)
 
 ## 最新版本
 
