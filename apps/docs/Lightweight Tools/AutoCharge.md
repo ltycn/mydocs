@@ -25,15 +25,22 @@ AutoCharge在运行时可以检测Windows PC的电量，并控制PDU的开合状
 
 ## 使用方法
 
-1. Direct Control模式
+### Direct Control模式
+```markdown
 AutoCharge.exe [Socket Port] [Control]
-Socket Port: 插口顺序（1~8）
-Control：控制开关（1：开 0：关）
+```
+- Socket Port: 插口顺序（1~8）
+- Control：控制开关（1：开 0：关）
+
 ![](./AutoCharge/use-examples.png)
 
-2. Benchmark模式
+### Benchmark模式
+```markdown
 AutoCharge.exe [Socket Port]
-Socket Port: 插口顺序（1~8）
+```
+- Socket Port: 插口顺序（1~8）
+- 程序会判断当前电量，如果小于等于30%，则会打开电源持续充电至80%。期间程序会阻塞进程，待充电完成程序会自动关闭。
+
 ![](./AutoCharge/use-examples2.png)
 
 ## 最新版本
