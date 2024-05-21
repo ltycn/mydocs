@@ -39,7 +39,8 @@ AutoCharge.exe [Socket Port] [Control]
 AutoCharge.exe [Socket Port]
 ```
 - Socket Port: 插口顺序（1~8）
-- 程序会判断当前电量，如果小于等于30%，则会打开电源持续充电至80%。期间程序会阻塞进程，待充电完成程序会自动关闭。
+- 程序会判断当前电量，如果小于等于30%，则会打开电源持续充电至80%。期间程序会阻塞进程，待充电完成程序会自动关闭
+- 如果当前电量大于30%，则程序会关闭，继续执行脚本的其他任务
 
 ![](./AutoCharge/use-examples2.png)
 
