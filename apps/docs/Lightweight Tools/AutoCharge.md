@@ -75,5 +75,7 @@ for %%a in (0 1) do (
 ```
 ## 项目地址
 
+[OneDrive下载地址](https://lenovobeijing-my.sharepoint.com/:f:/g/personal/liuty24_lenovo_com/EniBIocqO5NPvEqtQ1vVU4EBavNws7CQPtVtheaVGgBXVw?e=KaYuxu)
+
 [Github页面](https://github.com/ltycn/AutoCharge)
 

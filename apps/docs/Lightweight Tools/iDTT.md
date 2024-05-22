@@ -8,7 +8,7 @@ sidebar_class_name: lightweight tools
 快速查看当前DTT配置，无需再进入浏览器。高效、快速、低内存占用
 
 ## 最新版本
-[下载链接](https://lenovobeijing-my.sharepoint.com/:u:/g/personal/liuty24_lenovo_com/EXQ37J9QwqdHk4UvfR66AiIBiZnccmp_mU1hXPaxiT-7rg?e=s1Gryz)
+[下载链接](https://lenovobeijing-my.sharepoint.com/:f:/g/personal/liuty24_lenovo_com/EniBIocqO5NPvEqtQ1vVU4EBavNws7CQPtVtheaVGgBXVw?e=KaYuxu)
 
 [Github页面](https://github.com/ltycn/iDTT)
 
