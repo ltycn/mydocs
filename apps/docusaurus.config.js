@@ -8,12 +8,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My apps',
+  title: 'Terrys Docs',
   tagline: 'Something cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://apps.terry.ee',
+  url: 'https://docs.terry.ee',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ltycn', // Usually your GitHub org/user name.
-  projectName: 'apps', // Usually your repo name.
+  projectName: 'mydocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -62,7 +62,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My apps',
+        title: 'Terrys Docs',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -76,7 +76,7 @@ const config = {
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/ltycn/apps',
+            href: 'https://github.com/ltycn/mydocs',
             label: 'GitHub',
             position: 'right',
           },
