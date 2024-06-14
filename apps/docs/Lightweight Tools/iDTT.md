@@ -1,6 +1,5 @@
 ---
-sidebar_position: 1
-sidebar_label: iDTT
+sidebar_label: iDTT - GUI Tool
 sidebar_class_name: lightweight tools
 ---
 
