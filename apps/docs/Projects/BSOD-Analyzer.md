@@ -3,33 +3,30 @@ sidebar_label: BSOD Analyzer WebApp
 sidebar_class_name: Projects
 ---
 
-## 项目背景
+## 背景
 
-为方便PA针对BSOD现象快速定位问题根源，节省PA/SA Team对接的工作量，同时统一归纳测试期间产生的BSOD Dump文件，BSOD Analyzer WebApp可以自动化执行上传、存储、分析、AI总结、E-Mail提醒等功能。可以大幅缩短PA/SA Team的Debug所用时间。
+为方便PA针对BSOD现象快速定位问题根源，节省PA/SA Team对接的工作量，同时统一归纳测试期间产生的BSOD Dump文件，BSOD Analyzer WebApp可以自动化执行**上传、存储、分析、AI总结、E-Mail提醒**等功能。可以大幅缩短PA/SA Team的Debug所用时间。
 
 ## 功能
 
-- Dump上传
+- **Dump上传**  
+  填写上传人的 ITCode 和简单描述，选择要上传的 Dump 文件，点击 "Submit" 即可完成上传。
 
-填写上传人ITCode和简单的描述，再选择要上传的Dump文件，点击Submit即可上传
+- **存储**  
+  上传后的 Dump 文件将根据 ITCode 和上传时间自动分类归档存储在服务器端。存储路径可自定义设置。
 
-- 存储
+- **分析**  
+  上传完成后，后台将自动进行 Dump 文件的分析，并生成一个 txt 文件，保存于 Dump 文件所在路径的文件夹中。
 
-Dump上传后自动按ITCode和上传时间进行分类归档存储在Server端。可以指定存储路径
+- **AI提取**  
+  分析完成的 txt 结果将提交给 AI 进行进一步分析，生成一份 HTML 格式的报告（当前使用 ChatGPT，未来可更换为本地模型）。
 
-- 分析
+- **E-Mail提醒**  
+  后端程序会将生成的 HTML 格式分析报告作为邮件正文，发送到提交人 ITCode 的邮箱中。
 
-完成Dump的传输过程后，后台自动进行分析。并将对Dump的分析结果生成txt文件，保存在Dump同路径的文件夹中
+- **记录查看**  
+  所有步骤完成后，可以在主页面的提交记录详情中查看分析过程中产生的所有文件。
 
-- AI提取
-
-后端程序会将上一步分析的txt结果提交AI进行分析，并生成一份html格式的报告（目前采用的是ChatGPT，后续随时可更换本地模型）
-
-- E-Mail提醒
-
-后端程序会将上一步产生的html格式的分析报告作为邮件正文，发送到提交人ITCode的邮箱中。
-
-在完成所有步骤后，可以在主页面的提交记录详情中查看分析过程中产生的所有文件
 
 ## 技术栈
 
@@ -37,11 +34,21 @@ Dump上传后自动按ITCode和上传时间进行分类归档存储在Server端�
 - 后端：Nodejs
 - 数据库：MongoDB
 
+## 环境要求
+
+- Node.js 20+
+- Python 3.11+
+
 ## 安装
 
 ```bash
 # 拉取项目文件
 git clone https://github.com/ltycn/LNVPE-BSOD.git
+
+cd LNVPE-BSOD
+
+# 安装python依赖
+pip install requirements.txt
 
 # 启动后端程序
 cd server
@@ -50,6 +57,17 @@ node server.js
 # 启动前端
 npm start
 ```
+
+## 截图
+
+![](.\BSOD-Analyzer\1.png)
+
+![](.\BSOD-Analyzer\2.png)
+
+![](.\BSOD-Analyzer\3.png)
+
+![](.\BSOD-Analyzer\4.png)
+
 
 ## RESTAPI使用
 
@@ -85,6 +103,7 @@ npm start
   "file": "<file>"
 }
 ```
+### Curl 示例
 
 ```bash
 curl -X POST http://localhost:3000/api/submissions \
@@ -118,16 +137,3 @@ curl -X POST http://localhost:3000/api/submissions \
   "error": "Submission failed"
 }
 ````
-
-
-## 截图
-
-![](.\BSOD-Analyzer\1.png)
-
-![](.\BSOD-Analyzer\2.png)
-
-![](.\BSOD-Analyzer\3.png)
-
-![](.\BSOD-Analyzer\4.png)
-
-
