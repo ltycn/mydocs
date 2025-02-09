@@ -1,8 +1,13 @@
-# Platform Logger Service
+---
+sidebar_label: Logger Tool
+sidebar_class_name: lightweight tools
+---
+
+# Platform Logger Tool
 
 ## 1. 项目概述
 
-Platform Log Service 是一个适用于 Windows 平台的日志采集与上传工具，基于 C# 开发。它支持 **Named Pipe（命名管道）** 方式采集日志，并通过 **阿里云日志服务（Aliyun Log Service）** 进行存储和分析。
+Platform Logger Tool 是一个适用于 Windows 平台的日志采集与上传工具，基于 C# 开发。它支持 **Named Pipe（命名管道）** 方式采集日志，并通过 **阿里云日志服务（Aliyun Logger Tool）** 进行存储和分析。
 
 该工具支持 **实时日志上传** 和 **日志文件批量上传** 两种模式，可满足不同场景需求。
 
@@ -25,7 +30,7 @@ Platform Log Service 是一个适用于 Windows 平台的日志采集与上传�
 
 **使用方式**：
 ```plaintext
-LogService.exe /stream
+Logger.exe /stream
 ```
 启动后，程序自动监听 Named Pipe 并将接收到的日志上传至阿里云。
 
@@ -37,11 +42,11 @@ LogService.exe /stream
 
 **使用方式**：
 ```plaintext
-LogService.exe /filemode /logstore <filepath>
+Logger.exe /filemode /logstore <filepath>
 ```
 示例：
 ```plaintext
-LogService.exe /filemode /dispatcherlog C:\logs\dispatcher.csv
+Logger.exe /filemode /dispatcherlog C:\logs\dispatcher.csv
 ```
 程序会自动解析日志文件并批量上传至阿里云日志服务。
 
