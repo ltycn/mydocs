@@ -32,7 +32,7 @@ Platform Logger Tool 是一个适用于 Windows 平台的日志采集与上传�
 ```plaintext
 Logger.exe /stream
 ```
-启动后，程序自动监听 Named Pipe 并将接收到的日志上传至阿里云。
+启动后，程序自动监听 Named Pipe， 并将接收到的内容上传至阿里云。
 
 ### **3.2 文件上传模式（File Mode）**
 
@@ -63,25 +63,24 @@ Logger.exe /filemode /dispatcherlog C:\logs\dispatcher.csv
 
 ### **4.2 Named Pipe 数据格式**
 
-- 采用**键值对格式**，各字段使用 `,` 分隔，每条日志数据以 `\n` 结尾。
+- 为了最大程度降低发送端的数据处理任务，特意避开使用json格式传输数据，而改用优化过的格式。
+- 采用**键值对格式**，键值之间使用`=`连接，每个字段使用 `,` 分隔，每条日志数据以 `\n` 结尾。
 - 必须包含 `Timestamp` 字段，格式为 Unix 时间戳。
 - 示例数据：
 
 ```plaintext
 CpuUsage=25.58,AvailableMemoryMB=0.003,DiskReadWriteBytes=0.000,ThreadCount=9347,Timestamp=1738826595\n
-LogLevel=INFO,Message=Dispatcher started successfully,Timestamp=1738826600\n
+
+message=Dispatcher started successfully,Timestamp=1738826600\n
 ```
 
 ### **4.3 文件格式要求**
 
-- CSV 文件：需包含表头，字段间用逗号 `,` 分隔。
+- CSV 文件：需包含表头，字段中用`=`连接，字段间用逗号 `,` 分隔。
 - 文本日志：每行代表一条日志记录，必须包含 `Timestamp` 字段。
 
 ## 5. 预期效果
 
 - **高效日志采集**：支持高并发数据处理，保证日志稳定上传。
 - **低延迟数据传输**：实时模式确保日志快速到达云端，支持秒级监控。
-- **灵活适配业务需求**：提供实时和批量两种模式，适应不同业务场景。
-
-此工具可用于应用运行监控、问题排查、性能分析等多个业务需求，为系统稳定性提供有力支持。
-
+- **灵活适配需求**：提供实时和批量两种模式，适应不同场景。
